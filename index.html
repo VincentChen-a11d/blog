@@ -173,11 +173,13 @@
     background:linear-gradient(155deg, var(--indigo) 0%, var(--coral) 100%);
     position:relative; overflow:hidden;
   }
-  .about-photo::after{
-    content:"照片 / 头像占位"; position:absolute; inset:0;
-    display:flex; align-items:center; justify-content:center;
-    color:rgba(255,255,255,0.85); font-family:'IBM Plex Mono',monospace; font-size:0.78rem;
-  }
+  .about-photo img{
+  width:100%;
+  height:100%;
+  display:block;
+  object-fit:cover;
+  object-position:center;
+}
   .about-text p{ font-size:1rem; }
   .pull{
     font-family:'Fraunces', serif; font-style:italic; font-weight:420;
@@ -355,11 +357,13 @@
   <!-- ================= 关于 ================= -->
   <section id="about">
     <div class="wrap about-grid reveal">
-      <div class="about-photo"></div>
+      <div class="about-photo">
+  < img src="avatar.jpg" alt="陈文轩的头像">
+</div>
       <div class="about-text">
         <span class="eyebrow">关于我</span>
         <!-- 改这里：引言 / 简介正文 -->
-        <p class="pull">"我把一半时间给了提示词，一半时间给了——它们其实是同一种耐心。"</p>
+        <p class="pull">"我把一半时间给了提示词，一半时间给了ChatGPT——它们其实是同一种耐心。"</p>
         <p>我是一名对 AI 与数字创作都感兴趣的实践者。白天研究提示词结构、Agent 工作流和模型能力边界；晚上打开 iPad，用ChatGPT、AI 工具、提示词、LumaFusion 和 iPad 视频创作。这个网站是我把两边的笔记放在一起的地方——既有可以直接复制使用的提示词模板，也有有趣的项目。</p>
         <p>如果你也在做类似的事情，欢迎交流；如果你想合作，也欢迎在下面找到我的联系方式。</p>
       </div>
